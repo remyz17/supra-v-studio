@@ -1,3 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Space Mono', sans-serif;
+  }
+  p {
+    @apply text-neutral-300;
+  }
+  a {
+    @apply text-sm font-semibold leading-6 text-white hover:text-fuchsia-300 transition-colors;
+  }
+  h1 {
+    @apply text-4xl font-bold tracking-tight text-white sm:text-6xl;
+  }
+  h2 {
+    @apply text-3xl font-bold tracking-tight text-white sm:text-4xl;
+  }
+  section {
+    @apply py-24 sm:py-32 mx-auto max-w-7xl px-6 lg:px-8;
+  }
+}
+
+.button-primary {
+  @apply rounded-md bg-fuchsia-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-fuchsia-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-500;
+}
+
+.input-primary {
+  @apply block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500 sm:text-sm sm:leading-6;
+}
+
+.leading {
+  @apply text-lg leading-8;
+}
+
+.tooltip {
+  @apply text-base font-semibold leading-7 text-fuchsia-300;
+}
